@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Elite Football Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0A2647",
+              lime: "#57C84D",
+              softblue: "#144272",
+              darkgray: "#1E1E1E",
+            },
+          },
+        },
+      };
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
+      });
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-darkgray font-sans">
+    <!-- HEADER -->
+    <header
+      class="flex justify-between items-center bg-navy text-white px-8 py-4"
+    >
+      <div class="text-2xl font-bold">Elite Football Agency</div>
+      <nav>
+        <ul class="flex space-x-8">
+          <li>
+            <a
+              href="index.html"
+              class="hover:text-lime transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="aboutus.html"
+              class="hover:text-lime transition-colors duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="services.html" class="text-lime font-semibold">Services</a>
+          </li>
+          <li>
+            <a
+              href="contactus.html"
+              class="hover:text-lime transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="h-72 bg-cover bg-center relative"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1579981822192-57adf06ee04f?auto=format&fit=crop&w=1950&q=80');
+      "
+      data-aos="fade-in"
+    >
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4"
+      >
+        <h1
+          class="text-4xl md:text-5xl font-bold text-white"
+          data-aos="fade-down"
+        >
+          Our Services
+        </h1>
+      </div>
+    </section>
+
+    <!-- SERVICES CARDS -->
+    <section class="py-16 px-8 md:px-20">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+          >
+            <h3 class="text-xl font-semibold mb-3">Player Management</h3>
+            <p>
+              Comprehensive guidance to help players advance their careers and
+              make informed decisions.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <h3 class="text-xl font-semibold mb-3">Contract Negotiation</h3>
+            <p>
+              Negotiating contracts with top clubs to secure the best
+              opportunities for our players.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <h3 class="text-xl font-semibold mb-3">Scouting & Trials</h3>
+            <p>
+              Connecting players with clubs, tournaments, and professional
+              trials worldwide.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <h3 class="text-xl font-semibold mb-3">Career Consulting</h3>
+            <p>
+              Advice on career development, branding, sponsorships, and media
+              presence.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <h3 class="text-xl font-semibold mb-3">Legal Support</h3>
+            <p>
+              Ensuring contracts and agreements comply with regulations and
+              protect our clients.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <h3 class="text-xl font-semibold mb-3">Performance Analysis</h3>
+            <p>
+              Analyzing player stats, performance, and potential to guide
+              professional decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white py-8 px-8 md:px-20">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <p>&copy; 2025 Elite Football Agency. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-lime transition-colors duration-300"
+            >Facebook</a
+          >
+          <a href="#" class="hover:text-lime transition-colors duration-300"
+            >Twitter</a
+          >
+          <a href="#" class="hover:text-lime transition-colors duration-300"
+            >Instagram</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

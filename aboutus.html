@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Elite Football Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0A2647",
+              lime: "#57C84D",
+              softblue: "#144272",
+              darkgray: "#1E1E1E",
+            },
+          },
+        },
+      };
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
+      });
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-darkgray font-sans">
+    <!-- HEADER -->
+    <header
+      class="flex justify-between items-center bg-navy text-white px-8 py-4"
+    >
+      <div class="text-2xl font-bold">Elite Football Agency</div>
+      <nav>
+        <ul class="flex space-x-8">
+          <li>
+            <a
+              href="index.html"
+              class="hover:text-lime transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html" class="text-lime font-semibold">About</a>
+          </li>
+
+          <li>
+            <a
+              href="services.html"
+              class="hover:text-lime transition-colors duration-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="contactus.html"
+              class="hover:text-lime transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="h-96 bg-cover bg-center relative"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1606921370802-1e0071e7a0f1?auto=format&fit=crop&w=1950&q=80');
+      "
+      data-aos="fade-in"
+    >
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4"
+      >
+        <h1
+          class="text-4xl md:text-5xl font-bold text-white"
+          data-aos="fade-down"
+        >
+          About Elite Football Agency
+        </h1>
+      </div>
+    </section>
+
+    <!-- MISSION/VISION -->
+    <section class="py-16 px-8 md:px-20" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+        <p class="text-lg mb-8">
+          To empower athletes by providing top-tier representation, career
+          guidance, and opportunities to succeed on and off the pitch.
+        </p>
+        <h2 class="text-3xl font-bold mb-6">Our Vision</h2>
+        <p class="text-lg">
+          To be recognized as the leading football agency that develops talent,
+          fosters professionalism, and connects players with global
+          opportunities.
+        </p>
+      </div>
+    </section>
+
+    <!-- TEAM / AGENTS -->
+    <section class="py-16 px-8 md:px-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
+          Meet Our Agents
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a3?auto=format&fit=crop&w=500&q=80"
+              alt="Agent 1"
+              class="w-32 h-32 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">John Doe</h3>
+            <p>Senior Agent – Player Management & Contracts</p>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80"
+              alt="Agent 2"
+              class="w-32 h-32 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Jane Smith</h3>
+            <p>Talent Scout – Youth & Professional Players</p>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=500&q=80"
+              alt="Agent 3"
+              class="w-32 h-32 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Michael Lee</h3>
+            <p>Contracts Specialist & International Relations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white py-8 px-8 md:px-20">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <p>&copy; 2025 Elite Football Agency. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-lime transition-colors duration-300"
+            >Facebook</a
+          >
+          <a href="#" class="hover:text-lime transition-colors duration-300"
+            >Twitter</a
+          >
+          <a href="#" class="hover:text-lime transition-colors duration-300"
+            >Instagram</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
