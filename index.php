@@ -30,13 +30,12 @@
       document.addEventListener("DOMContentLoaded", () => {
         AOS.init({
           duration: 1000,
-          once: true, // animations happen only once
+          once: true,
           easing: "ease-in-out",
         });
       });
     </script>
 
-    <!-- Smooth scroll for anchor links -->
     <style>
       html {
         scroll-behavior: smooth;
@@ -44,53 +43,14 @@
     </style>
   </head>
   <body class="bg-white text-darkgray font-sans">
-    <!-- HEADER -->
-    <header
-      class="flex justify-between items-center bg-black text-white px-8 py-4"
-    >
-      <div class="flex items-center space-x-3">
-        <img
-          src="assets/img/sefa.png"
-          alt="Sierra Elite Football Agency Logo"
-          class="h-10 w-auto"
-        />
-        <span class="text-2xl font-bold">Sierra Elite Football Agency</span>
-      </div>
-      <nav>
-        <ul class="flex space-x-8">
-          <li><a href="index.html" class="text-lime font-semibold">Home</a></li>
-          <li>
-            <a
-              href="aboutus.html"
-              class="hover:text-lime transition-colors duration-300"
-              >About</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="services.html"
-              class="hover:text-lime transition-colors duration-300"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a
-              href="contactus.html"
-              class="hover:text-lime transition-colors duration-300"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+    
+    <!-- HEADER COMPONENT -->
+    <?php include 'components/header.php'; ?>
 
     <!-- HERO SECTION -->
     <section
       class="h-screen bg-cover bg-center relative"
-      style="
-        background-image: url('assets/img/musa_tombo_hero.jpg');
-      "
+      style="background-image: url('assets/img/musa_tombo_hero.jpg');"
       data-aos="fade-up"
     >
       <div
@@ -111,7 +71,7 @@
           Building dreams, one player at a time
         </p>
         <a
-          href="contactus.html"
+          href="contactus.php"
           class="bg-lime hover:bg-softblue text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
           data-aos="zoom-in"
           data-aos-delay="600"
@@ -135,12 +95,12 @@
           data-aos="fade-up"
           data-aos-delay="400"
         >
-         Sierra Elite Football Agency is committed to representing top-tier talent and
+          Sierra Elite Football Agency is committed to representing top-tier talent and
           guiding players towards successful careers. Our team of experienced
           agents focuses on professional growth, contracts, and scouting.
         </p>
         <a
-          href="aboutus.html"
+          href="aboutus.php"
           class="bg-navy hover:bg-softblue text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
           data-aos="zoom-in"
           data-aos-delay="600"
@@ -209,42 +169,8 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-navy text-white py-8 px-8 md:px-20">
-      <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center"
-      >
-        <p>&copy; 2025 Sierra Elite Football Agency. All rights reserved.</p>
-        <nav>
-          <ul class="flex space-x-8">
-            <li>
-              <a
-                href="statements.html"
-                class="text-white font-semibold cursor-pointer"
-                >Statments</a
-              >
-            </li>
-            <li>
-              <a
-                href="accessibility.html"
-                class="cursor-pointer text-white font-semibold"
-                >Accessibility</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" class="hover:text-lime transition-colors duration-300"
-            >Facebook</a
-          >
-          <a href="#" class="hover:text-lime transition-colors duration-300"
-            >Twitter</a
-          >
-          <a href="#" class="hover:text-lime transition-colors duration-300"
-            >Instagram</a
-          >
-        </div>
-      </div>
-    </footer>
+    <!-- FOOTER COMPONENTS-->
+   
+    <?php include 'components/footer.php'; ?>
   </body>
 </html>

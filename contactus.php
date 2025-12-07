@@ -32,47 +32,10 @@
     </style>
   </head>
   <body class="bg-white text-darkgray font-sans">
-    <!-- HEADER -->
-    <header
-      class="flex justify-between items-center bg-black text-white px-8 py-4"
-    >
-      <div class="flex items-center space-x-3">
-        <img
-          src="assets/img/sefa.png"
-          alt="Sierra Elite Football Agency Logo"
-          class="h-10 w-auto"
-        />
-        <span class="text-2xl font-bold">Sierra Elite Football Agency</span>
-      </div>
-      <nav>
-        <ul class="flex space-x-8">
-          <li>
-            <a
-              href="index.html"
-              class="hover:text-lime transition-colors duration-300"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="aboutus.html"
-              class="hover:text-lime transition-colors duration-300"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="services.html"
-              class="hover:text-lime transition-colors duration-300"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a href="contactus.html" class="text-lime font-semibold">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    
+      <!-- HEADER COMPONENT -->
+    <?php include 'components/header.php'; ?>
+
 
     <!-- HERO -->
     <section
@@ -145,42 +108,8 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-navy text-white py-8 px-8 md:px-20">
-      <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center"
-      >
-        <p>&copy; 2025 Sierra Elite Football Agency. All rights reserved.</p>
-        <nav>
-          <ul class="flex space-x-8">
-            <li>
-              <a
-                href="statements.html"
-                class="text-white font-semibold cursor-pointer"
-                >Statments</a
-              >
-            </li>
-            <li>
-              <a
-                href="accessibility.html"
-                class="cursor-pointer text-white font-semibold"
-                >Accessibility</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" class="hover:text-lime transition-colors duration-300"
-            >Facebook</a
-          >
-          <a href="#" class="hover:text-lime transition-colors duration-300"
-            >Twitter</a
-          >
-          <a href="#" class="hover:text-lime transition-colors duration-300"
-            >Instagram</a
-          >
-        </div>
-      </div>
-    </footer>
+     <!-- FOOTER COMPONENTS-->
+   
+    <?php include 'components/footer.php'; ?>
   </body>
 </html>
