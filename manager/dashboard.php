@@ -10,7 +10,11 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'Club Manager') {
 $user_id = $_SESSION['user']['id'];
 
 // Manager record
-$manager = $conn->query("SELECT * FROM club_managers WHERE user_id = $user_id")->fetch_assoc();
+$manager = $conn->query("SELECT * FROM managers WHERE user_id = $user_id")->fetch_assoc();
+if (!$manager) {
+    die("Manager record not found. Please contact admin.");
+}
+
 
 // Check if manager has a club assigned
 $club_id = $manager['club_id'] ?? null;

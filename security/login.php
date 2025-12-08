@@ -5,12 +5,12 @@ $conn->select_db('football_agency');
 
 $errors = [];
 $success = '';
+$redirect = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
     $pass  = $_POST['password'] ?? '';
 
-    // Validation
     if (empty($email)) $errors[] = "Email is required.";
     if (empty($pass)) $errors[] = "Password is required.";
 
@@ -30,15 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'role' => $user['role']
                 ];
 
-                // Redirect by role dynamically after showing notification
                 $success = "Login successful! Redirecting to your dashboard...";
-                $redirect = '../player/dashboard.php'; // default
+
+                // Redirect by role
                 switch($user['role']){
-                    case 'Admin': $redirect = '../admin/dashboard.php'; break;
+                    case 'Player': $redirect = '../player/dashboard.php'; break;
                     case 'Agent': $redirect = '../agent/dashboard.php'; break;
                     case 'Club Manager': $redirect = '../manager/dashboard.php'; break;
+                    case 'Admin': $redirect = '../admin/dashboard.php'; break;
+                    default: $redirect = '../security/login.php';
                 }
-
             } else {
                 $errors[] = "Invalid credentials.";
             }
@@ -51,6 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 }
 ?>
+
+<!-- HTML part remains the same with notifications, progress bar, and Tailwind styling -->
+
+
+<!-- HTML part remains the same with notifications, progress bar, and Tailwind styling -->
+
 
 <!DOCTYPE html>
 <html lang="en">
