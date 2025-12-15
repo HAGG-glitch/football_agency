@@ -48,9 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Auto-create player record if role is Player
             if ($role === 'Player') {
                 $player_stmt = $conn->prepare("
-                    INSERT INTO players (user_id, age, position, nationality, height, weight, image)
-                    VALUES (?, ?, ?, ?, ?, ?, ?)
-                ");
+        INSERT INTO players (user_id, age, position, nationality, height, weight, image)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    ");
                 $default_age = 18;
                 $default_position = "Forward";
                 $default_nat = "Unknown";
@@ -92,12 +92,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmtAgent->close();
             } elseif ($role === 'Club Manager') {
                 $stmtManager = $conn->prepare("
-        INSERT INTO managers (user_id, club_name, experience_years)
-        VALUES (?, ?, ?)
+        INSERT INTO club_managers (user_id, club_id, manager_name, age, office_number)
+        VALUES (?, ?, ?, ?, ?)
     ");
-                $club_name = "Unknown";
-                $experience_years = 0;
-                $stmtManager->bind_param("ssi", $user_id, $club_name, $experience_years);
+
+                $default_club_id = NULL; // Not assigned yet
+                $default_manager_name = $name; // use registered user's name
+                $default_age = 30; // default age
+                $default_office_number = "TBD"; // placeholder
+
+                $stmtManager->bind_param(
+                    "iisss",
+                    $user_id,
+                    $default_club_id,
+                    $default_manager_name,
+                    $default_age,
+                    $default_office_number
+                );
+
                 $stmtManager->execute();
                 $stmtManager->close();
             }
